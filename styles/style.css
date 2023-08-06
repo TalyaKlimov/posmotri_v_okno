@@ -50,6 +50,27 @@ ol {
   white-space: nowrap;
 }
 
+input::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input, label {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus-visible {
+  outline: 1px solid #FFF;
+}
+
 video {
   width: 711px;
   height: 386px;
@@ -59,7 +80,6 @@ video {
 fieldset {
   border: none;
 }
-
 
 .content {
   min-width: 1140px;
@@ -121,14 +141,15 @@ label:hover {
   padding-top: 2px;
   padding-bottom: 2px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-  border: 1px solid #fff;
-}
-
-.search-form__checkbox:focus:has(:focus-visible) {
+.search-form__label:focus-visible {
   outline: none;
   width: 229px;
   height: 31px;
@@ -138,12 +159,10 @@ label:hover {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-
 }
 
 .search-form__checkbox {
   cursor: pointer;
-  display: none;
 }
 
 .search-form__pseudo-checkbox {
@@ -151,6 +170,10 @@ label:hover {
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox::before {
@@ -200,11 +223,13 @@ label:hover {
   color: #FFF;
   margin-top: 20px;
 }
+
 .content__details {
   width: 399px;
   height: 534px;
   grid-row-start: span 2;
 }
+
 .title {
   margin-bottom: 28px;
   color: #FFF;
@@ -215,6 +240,7 @@ label:hover {
   line-height: 94%;
   text-transform: uppercase;
 }
+
 .content__accent {
   color: #545050;
   font-family: Oswald;
@@ -224,9 +250,10 @@ label:hover {
   line-height: 94%; /* 70.5px */
   text-transform: uppercase;
 }
+
 .content__list {
   position: relative;
-  overflow-y: auto;
+  overflow: auto;
   height: 298px;
 }
 
@@ -252,7 +279,6 @@ label:hover {
 
 .content__card-link:focus {
   outline: none;
-  
 }
 
 .content__card-link:focus-visible {
@@ -272,10 +298,12 @@ label:hover {
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .content__video-card-description-container {
   width: 100%;
   height: 100%;
 }
+
 .content__video-card-title {
   color: #FFF;
   font-family: Oswald;
@@ -285,6 +313,7 @@ label:hover {
   line-height: 100%; 
   text-transform: uppercase;
 }
+
 .content__video-card-description {
   color: #FFF;
   font-family: Fira Sans Condensed;
@@ -294,6 +323,7 @@ label:hover {
   line-height: 16.2px; 
   padding-top: 6px;
 }
+
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -304,13 +334,4 @@ label:hover {
   width: 399px;
   height: 34px;
   color: #FFF;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
